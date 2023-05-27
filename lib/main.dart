@@ -4,11 +4,7 @@ import 'package:my_bloc/core/service_locator.dart';
 import 'package:my_bloc/features/home/presentataion/cubit/home_cubit.dart';
 import 'package:my_bloc/features/home/presentataion/screens/home_page.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await setUpServiceLocator();
-  runApp(const MyApp());
-}
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
