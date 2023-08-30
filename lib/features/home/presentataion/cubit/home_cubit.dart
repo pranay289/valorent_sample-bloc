@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:my_bloc/core/service_locator.dart';
 import 'package:my_bloc/features/home/data/models/valorentagents/valorent_agents_model.dart';
+import 'package:my_bloc/features/home/domain/entity/valorent_entity.dart';
 import 'package:my_bloc/features/home/domain/usecases/home_use_case.dart';
 import 'package:my_bloc/features/home/presentataion/screens/home_page.dart';
 

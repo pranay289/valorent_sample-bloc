@@ -1,17 +1,18 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:my_bloc/features/home/data/models/valorentagents/valorent_agents_model.dart';
+import 'package:my_bloc/features/home/domain/entity/valorent_entity.dart';
 
 class AgentDetailsPage extends StatefulWidget {
   final String? tag;
   final String? image;
   final String? backgroundImage;
   final String? description;
-  final List<Ability>? abilities;
+  final List<AbilityModel>? abilities;
   final String? agentName;
 
   final Animation<double> transition;
-  final Role? role;
+  final RoleModel? role;
   const AgentDetailsPage(
       {super.key,
       required this.tag,
@@ -29,6 +30,7 @@ class AgentDetailsPage extends StatefulWidget {
 
 class _AgentDetailsPageState extends State<AgentDetailsPage>
     with SingleTickerProviderStateMixin {
+      
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -125,7 +127,7 @@ class _AgentDetailsPageState extends State<AgentDetailsPage>
                                             margin: const EdgeInsets.only(
                                                 top: 10, bottom: 7),
                                             child: CachedNetworkImage(
-                                                imageUrl: e.displayIcon!)),
+                                                imageUrl:e.displayIcon !)),
                                         Text(e.displayName!.split("/").first,
                                             style: const TextStyle(
                                                 color: Colors.white,

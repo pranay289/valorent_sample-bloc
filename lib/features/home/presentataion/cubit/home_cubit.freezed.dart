@@ -20,7 +20,7 @@ mixin _$HomeStateCubit {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(Valorent valorent) data,
+    required TResult Function(ValorentEntity valorent) data,
     required TResult Function(String error) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +28,7 @@ mixin _$HomeStateCubit {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(Valorent valorent)? data,
+    TResult? Function(ValorentEntity valorent)? data,
     TResult? Function(String error)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ mixin _$HomeStateCubit {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(Valorent valorent)? data,
+    TResult Function(ValorentEntity valorent)? data,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) =>
@@ -125,7 +125,7 @@ class _$_Initial implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(Valorent valorent) data,
+    required TResult Function(ValorentEntity valorent) data,
     required TResult Function(String error) error,
   }) {
     return initial();
@@ -136,7 +136,7 @@ class _$_Initial implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(Valorent valorent)? data,
+    TResult? Function(ValorentEntity valorent)? data,
     TResult? Function(String error)? error,
   }) {
     return initial?.call();
@@ -147,7 +147,7 @@ class _$_Initial implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(Valorent valorent)? data,
+    TResult Function(ValorentEntity valorent)? data,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) {
@@ -238,7 +238,7 @@ class _$_Loading implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(Valorent valorent) data,
+    required TResult Function(ValorentEntity valorent) data,
     required TResult Function(String error) error,
   }) {
     return loading();
@@ -249,7 +249,7 @@ class _$_Loading implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(Valorent valorent)? data,
+    TResult? Function(ValorentEntity valorent)? data,
     TResult? Function(String error)? error,
   }) {
     return loading?.call();
@@ -260,7 +260,7 @@ class _$_Loading implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(Valorent valorent)? data,
+    TResult Function(ValorentEntity valorent)? data,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) {
@@ -317,9 +317,7 @@ abstract class _$$_DataCopyWith<$Res> {
   factory _$$_DataCopyWith(_$_Data value, $Res Function(_$_Data) then) =
       __$$_DataCopyWithImpl<$Res>;
   @useResult
-  $Res call({Valorent valorent});
-
-  $ValorentCopyWith<$Res> get valorent;
+  $Res call({ValorentEntity valorent});
 }
 
 /// @nodoc
@@ -338,16 +336,8 @@ class __$$_DataCopyWithImpl<$Res>
       valorent: null == valorent
           ? _value.valorent
           : valorent // ignore: cast_nullable_to_non_nullable
-              as Valorent,
+              as ValorentEntity,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ValorentCopyWith<$Res> get valorent {
-    return $ValorentCopyWith<$Res>(_value.valorent, (value) {
-      return _then(_value.copyWith(valorent: value));
-    });
   }
 }
 
@@ -357,7 +347,7 @@ class _$_Data implements _Data {
   const _$_Data({required this.valorent});
 
   @override
-  final Valorent valorent;
+  final ValorentEntity valorent;
 
   @override
   String toString() {
@@ -387,7 +377,7 @@ class _$_Data implements _Data {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(Valorent valorent) data,
+    required TResult Function(ValorentEntity valorent) data,
     required TResult Function(String error) error,
   }) {
     return data(valorent);
@@ -398,7 +388,7 @@ class _$_Data implements _Data {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(Valorent valorent)? data,
+    TResult? Function(ValorentEntity valorent)? data,
     TResult? Function(String error)? error,
   }) {
     return data?.call(valorent);
@@ -409,7 +399,7 @@ class _$_Data implements _Data {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(Valorent valorent)? data,
+    TResult Function(ValorentEntity valorent)? data,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) {
@@ -458,9 +448,9 @@ class _$_Data implements _Data {
 }
 
 abstract class _Data implements HomeStateCubit {
-  const factory _Data({required final Valorent valorent}) = _$_Data;
+  const factory _Data({required final ValorentEntity valorent}) = _$_Data;
 
-  Valorent get valorent;
+  ValorentEntity get valorent;
   @JsonKey(ignore: true)
   _$$_DataCopyWith<_$_Data> get copyWith => throw _privateConstructorUsedError;
 }
@@ -529,7 +519,7 @@ class _$_Error implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(Valorent valorent) data,
+    required TResult Function(ValorentEntity valorent) data,
     required TResult Function(String error) error,
   }) {
     return error(this.error);
@@ -540,7 +530,7 @@ class _$_Error implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(Valorent valorent)? data,
+    TResult? Function(ValorentEntity valorent)? data,
     TResult? Function(String error)? error,
   }) {
     return error?.call(this.error);
@@ -551,7 +541,7 @@ class _$_Error implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(Valorent valorent)? data,
+    TResult Function(ValorentEntity valorent)? data,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) {

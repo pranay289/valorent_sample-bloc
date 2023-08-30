@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:my_bloc/shared/strings.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class Request {
   final Dio _dio = Dio();
@@ -25,11 +26,10 @@ class Request {
     );
     _dio
       ..interceptors.add(
-        LogInterceptor(
-          requestBody: kDebugMode ? true : false,
+       
+        PrettyDioLogger( requestBody: kDebugMode ? true : false,
           responseBody: kDebugMode ? true : false,
-          requestHeader: kDebugMode ? true : false,
-        ),
+          requestHeader: kDebugMode ? true : false,)
       )
       ..interceptors.add(
         InterceptorsWrapper(

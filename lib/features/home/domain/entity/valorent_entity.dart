@@ -1,15 +1,12 @@
-class ValorentEntity {
-  ValorentEntity({
-    this.status,
-    this.data,
-  });
 
+class ValorentEntity {
   int? status;
-  List<AgentsData>? data;
+  List<AgentsDataModel>? data;
+  ValorentEntity({this.data, this.status});
 }
 
-class AgentsData {
-  AgentsData({
+class AgentsDataModel {
+  AgentsDataModel({
     this.uuid,
     this.displayName,
     this.description,
@@ -27,6 +24,8 @@ class AgentsData {
     this.isFullPortraitRightFacing,
     this.isPlayableCharacter,
     this.isAvailableForTest,
+    this.role,
+    this.abilits
   });
 
   String? uuid;
@@ -46,4 +45,32 @@ class AgentsData {
   bool? isFullPortraitRightFacing;
   bool? isPlayableCharacter;
   bool? isAvailableForTest;
+  RoleModel? role;
+  List<AbilityModel>? abilits;
+}
+
+class RoleModel {
+  RoleModel({
+    this.uuid,
+    this.displayName,
+    this.description,
+    this.displayIcon,
+    this.assetPath,
+  });
+
+  String? uuid;
+  String? displayName;
+  String? description;
+  String? displayIcon;
+  String? assetPath;
+}
+
+
+class AbilityModel {
+  AbilityModel({this.slot, this.displayName, this.description, this.displayIcon});
+
+  String? slot;
+  String? displayName;
+  String? description;
+  String? displayIcon;
 }

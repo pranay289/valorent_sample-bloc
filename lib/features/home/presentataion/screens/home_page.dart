@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_bloc/features/home/presentataion/cubit/home_cubit.dart';
-import 'package:my_bloc/features/home/presentataion/screens/agen_details_screen.dart';
+import 'package:my_bloc/features/home/presentataion/screens/agent_details_screen.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
                                       tag: e.bustPortrait,
                                       backgroundImage: e.background,
                                       description: e.description,
-                                      abilities: e.abilities,
+                                      abilities: e.abilits,
                                       agentName: e.displayName,
                                       role: e.role,
                                     ),
