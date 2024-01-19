@@ -30,8 +30,4 @@ jobs:
           artifacts: "build/app/outputs/flutter-apk/*"
           tag: v1.0.${{ github.run_number }}
           token: ${{ secrets.TOKEN }}
-          # token:
-          #   description: 'token'
-          #   required: false
-          #   default: ${{ github.token }}
       
